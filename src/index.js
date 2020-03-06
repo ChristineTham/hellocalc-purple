@@ -5,7 +5,7 @@ import App from './app/App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <BrowserRouter basename="http://localhost:3000">
+  <BrowserRouter basename="/home">
     <App />
   </BrowserRouter>
 , document.getElementById('root'));

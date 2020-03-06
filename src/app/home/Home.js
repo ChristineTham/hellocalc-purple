@@ -6,6 +6,8 @@ import React, { Component } from 'react';
 // import DatePicker from 'react-datepicker';
 // import { Dropdown } from 'react-bootstrap';
 
+import CalcForm from '../components/CalcForm';
+
 export class Home extends Component {
   constructor(props) {
     super(props);
@@ -92,7 +94,24 @@ inputChangeHandler(event) {
   render () {
     return (
       <div>
+        <div className="page-header">
+          <h3 className="page-title">Hello Calculator</h3>
+          <nav aria-label="breadcrumb">
+            <ol className="breadcrumb">
+              <li className="breadcrumb-item active" aria-current="page">Home</li>
+            </ol>
+          </nav>
+        </div>
         <div className="row">
+          <div className="col-md-6 grid-margin stretch-card">
+            <div className="card">
+              <div className="card-body">
+                <h4 className="card-title">Calculator form</h4>
+                <p className="card-description"> Evaluate mathjs expression</p>
+                <CalcForm />
+              </div>
+            </div> 
+          </div>
           <div className="col-xl-4 col-lg-6 col-sm-6  grid-margin stretch-card">
             <div className="card">
               <div className="card-body">
@@ -123,10 +142,11 @@ inputChangeHandler(event) {
             </div>
           </div>
         </div>
-      </div> 
+      </div>
     );
   }
 }
+
 const ListItem = (props) => {
   return (
       <li className={(props.isCompleted ? 'completed' : null)}>
